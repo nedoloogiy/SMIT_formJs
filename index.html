@@ -16,7 +16,61 @@
 2.4) Создать в форме 3 тэга input с типом radio (текст для радио кнопок Котлеточки Сосисочки Пюрешка)
 2.5) Создать в форме кнопку с текстом отправить
 3) создать пустой тэг div для котоламповой истории
- -->
+
+-->
+<div class="wrapper">
+	<div class="container">
+		<form action="" id="catLight" method="post">
+			<div class="fieldWrap">
+				<label for="name">Имя:</label>
+				<br>
+				<input type="text" name="name" id="name">
+			</div>
+			<ul id="partsList">
+				<li class="partItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+				<li class="partItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+				<li class="partItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+			</ul>
+			<!-- End #partsList -->
+			<div class="fieldWrap">
+				<label for="age">Возраст</label>
+				<br>
+				<input type="text" name="age" id="age">
+			</div>
+			<ul id="foodsList">
+				<li class="foodItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+				<li class="foodItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+				<li class="foodItem">
+					<label>
+						<input type="radio" name="" id="">
+					</label>
+				</li>
+			</ul>
+			<button type="button" id="generate" name="generate">Сгенерировать</button>
+		</form>
+	</div>
+</div>
+
 <script src="main.js"></script>
 </body>
 </html>
