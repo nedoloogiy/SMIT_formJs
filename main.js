@@ -11,4 +11,12 @@
 let parts = ['Усы','Рот','Хвост']; // массив частей тела
 let foods = ['Котлетки','Сосисочки','Пюрешка']; // массив еды
 let btn = document.getElementById("generate");
+let radioParts = document.querySelectorAll("#partsList input");
+let radioFoods = document.querySelectorAll("#foodsList input");
 
+btn.addEventListener('click',function(){
+	console.log(document.getElementById('name').value);
+	console.log(document.getElementById('age').value);
+	console.log(radioParts);
+	console.log(radioFoods);
+});
