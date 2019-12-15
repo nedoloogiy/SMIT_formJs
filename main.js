@@ -15,12 +15,9 @@ let radioParts = document.querySelectorAll("#partsList input");
 let radioFoods = document.querySelectorAll("#foodsList input");
 
 btn.addEventListener('click',function(){
-	console.log(document.getElementById('name').value);
-	console.log(document.getElementById('age').value);
-	console.log(radioParts);
-	console.log(radioFoods);
 	let part, food;
 	// Так делать не надо
+	/*
 	for(let i = 0; i < radioParts.length; i++){
 		if (radioParts[i].checked === true) {
 			part = radioParts[i].value;
@@ -33,8 +30,18 @@ btn.addEventListener('click',function(){
 			break;
 		}
 	}
+	*/
+	// А вот Так делать надо
+	part = getValueRadio(radioParts);
+	food = getValueRadio(radioFoods);
 	console.log(parts[part]);
 	console.log(foods[food]);
 });
 
-
+function getValueRadio(selector){
+	for(let i = 0; i < selector.length; i++){
+		if (selector[i].checked === true){
+			return selector[i].value;
+		}
+	}
+}
