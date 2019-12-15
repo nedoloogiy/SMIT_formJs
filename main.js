@@ -13,6 +13,8 @@ let foods = ['Котлетки','Сосисочки','Пюрешка']; // ма�
 let btn = document.getElementById("generate");
 let radioParts = document.querySelectorAll("#partsList input");
 let radioFoods = document.querySelectorAll("#foodsList input");
+let p = document.createElement('p');
+
 
 btn.addEventListener('click',function(){
 	let part, food, name, age;
@@ -38,7 +40,9 @@ btn.addEventListener('click',function(){
 	food = getValueRadio(radioFoods);
 	console.log(parts[part]);
 	console.log(foods[food]);
-	generate(name, age, part,food);
+	p.innerText = generate(name, age, part,food);
+	console.log(p);
+	document.getElementById("history").append(p);
 });
 
 function getValueRadio(selector){
