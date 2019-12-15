@@ -15,7 +15,9 @@ let radioParts = document.querySelectorAll("#partsList input");
 let radioFoods = document.querySelectorAll("#foodsList input");
 
 btn.addEventListener('click',function(){
-	let part, food;
+	let part, food, name, age;
+	name = document.getElementById("name").value;
+	age = document.getElementById("age").value;
 	// Так делать не надо
 	/*
 	for(let i = 0; i < radioParts.length; i++){
@@ -36,6 +38,7 @@ btn.addEventListener('click',function(){
 	food = getValueRadio(radioFoods);
 	console.log(parts[part]);
 	console.log(foods[food]);
+	generate(name, age, part,food);
 });
 
 function getValueRadio(selector){
@@ -44,4 +47,18 @@ function getValueRadio(selector){
 			return selector[i].value;
 		}
 	}
+}
+
+function generate(names,age,part,food){
+	console.log(names);
+	console.log(age);
+	console.log(part);
+	console.log(food);
+	console.log(parts);
+	console.log(foods);
+	let text = `Однажды ${names} захотел покушать. Но на беду, все, что он мог съесть, это ${foods[food]}.
+Вдобавок, после последнего приёма пищи ему было очень больно, когда его дёргали за ${parts[part]}.
+Шутка ли! Ведь ему уже ${age}`;
+console.log(text);
+return text;
 }
